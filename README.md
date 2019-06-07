@@ -20,12 +20,12 @@ node game.js
 ## Screenshots of the terminal / bash window output
 
 ###### Output initializing game
-![FirstScreenshot](/init.PNG)
+![FirstScreenshot](images/init.PNG)
 
 ###### Determining first guess and counting down
-![FirstScreenshot](/1guess.PNG)
+![FirstScreenshot](images/1guess.PNG)
 
 ###### Mid-game snapshot and informing user of correct guesses
-![FirstScreenshot](/mid-game.PNG)
+![FirstScreenshot](images/mid-game.PNG)
 
 
