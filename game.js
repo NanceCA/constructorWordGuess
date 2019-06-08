@@ -9,26 +9,28 @@
 var askLetter = require("./letter.js");
 var inquirer = require("inquirer");
 var words = ["happy", "cloudy", "stuffy nose", "programmer"];
+var game = new Game();
+
 
 var correctGuess = []; // push letters into this array if correct
 var finalSelection = []; //array to hold the randomly selected word
 var totalGuesses = finalSelection.length + 5; //user guess quantity
 
+function Game() {
 
-//-----SELECT WORD-----//
-function select(totalGuesses) {
-
-    //selects words from array and splits the word into an array
-    //use the read file function in here in the future
-    finalSelection = words[Math.floor(Math.random() * words.length)].split("");
-    // console.log(finalSelection);
-    //sending to the function that leverages inquirer
-    askLetter(finalSelection, totalGuesses);
+    //-----SELECT WORD-----//
+    this.select = function (totalGuesses) {
+        //selects words from array and splits the word into an array
+        //use the read file function in here in the future
+        finalSelection = words[Math.floor(Math.random() * words.length)].split("");
+        // console.log(finalSelection);
+        //sending to the function that leverages inquirer
+        askLetter(finalSelection, totalGuesses);
+    }
 };
 
-
 //-----JAVASCRIPT START READING HERE-----//
-select(totalGuesses);
+game.select(totalGuesses);
 // correct(finalSelection, guessedAnswers, recentGuess, totalGuesses);
 
 //-----RESET GAME -----//

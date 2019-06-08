@@ -4,7 +4,6 @@ var correct = require("./word");
 var guessedAnswers = []; //push letters into this array for guessed answers
 
 function askLetter(finalSelection, totalGuesses) {
-    console.log("hi")
 
     inquirer
         .prompt([
@@ -37,3 +36,4 @@ function askLetter(finalSelection, totalGuesses) {
 };
 
 module.exports = askLetter;
+

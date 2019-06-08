@@ -1,3 +1,5 @@
+var askLetter = require("./letter.js");
+
 //-----COMPARE ANSWER-----//
 
 function correct(finalSelection, userAnswer, recentGuess, totalGuesses) {
@@ -21,7 +23,7 @@ function rebuildView(finalSelection, correctGuess, recentGuess, totalGuesses) {
 
     if (finalSelection.indexOf(recentGuess) !== -1) {
         console.log("Congratulations! That is CORRECT!");
-        askLetter(finalSelection);
+        askLetter(finalSelection, totalGuesses);
     }
     else {
         console.log("Yikes, NOT CORRECT.")
